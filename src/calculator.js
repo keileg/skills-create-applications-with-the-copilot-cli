@@ -53,6 +53,8 @@ function divide(a, b) {
 
 const operations = { add, subtract, multiply, divide };
 
+module.exports = { add, subtract, multiply, divide };
+
 function main() {
   const [, , operation, arg1, arg2] = process.argv;
 
@@ -83,4 +85,6 @@ function main() {
   }
 }
 
-main();
+if (require.main === module) {
+  main();
+}
